@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Olá Mundo</h1>
+
+    <script>
+      var n1 = Number(window.prompt("Digite um número: "));
+      var n2 = Number(window.prompt("Digite um segundo número: "));
+      var s = n1 + n2;
+      window.alert("A soma dos valores é: " + s);
+      /*
+      Dentro da (var soma = n1 + n2) o javascript não irá somar os dois números
+      por que eles estão sendo guardados dentro (n1 e n2) como 'strings'
+      para que a soma aconteça é preciso converter esses dados de 'strings' para
+      números
+      */
+
+      /*
+      Podemos converter utilizando o Number.parseInt(n) ou o Number.parseFloat(n)
+      Ou ainda a forma mais atual onde o javascript vai decidir se é 'string' ou 'number' colocando apenas Number(n)
+      */
+    </script>
+  </body>
+</html>

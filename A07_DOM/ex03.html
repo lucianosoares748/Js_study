@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      body {
+        background-color: blue;
+        color: white;
+        font: normal 16pt Arial;
+      }
+
+      #card {
+        display: flex;
+        font: normal 20pt Arial;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        width: 250px;
+        height: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Somando valores</h1>
+    <input type="number" name="text1" id="text1" />+
+    <input type="number" name="text2" id="text2" />
+    <input type="button" value="somar" onclick="somar()" />
+    <div id="res">Resultado</div>
+
+    <script>
+      function somar() {
+        var numberOne = document.getElementById("text1");
+        var numberTwo = document.getElementById("text2");
+        var res = document.getElementById("res");
+
+        var n1 = Number(numberOne.value);
+        var n2 = Number(numberTwo.value);
+        var s = n1 + n2;
+
+        res.innerHTML = `O resultado da soma de ${n1} e ${n2} é ${s} `;
+      }
+    </script>
+  </body>
+</html>

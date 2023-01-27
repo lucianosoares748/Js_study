@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      body {
+        background-color: blue;
+        color: white;
+        font: normal 16pt Arial;
+      }
+
+      #card {
+        display: flex;
+        font: normal 20pt Arial;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        width: 250px;
+        height: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card">interaja...</div>
+
+    <script>
+      var card = document.querySelector("div#card");
+      card.addEventListener("click", clicar);
+      card.addEventListener("mouseenter", entrou);
+      card.addEventListener("mouseout", saiu);
+      card.addEventListener("mousemove", movendo);
+
+      function entrou() {
+        card.style.background = "green";
+        card.innerText = "entrou!";
+      }
+      function clicar() {
+        card.innerText = "clicou!";
+      }
+      function saiu() {
+        card.style.background = "red";
+        card.style.color = "white";
+        card.innerText = "saiu!";
+      }
+    </script>
+  </body>
+</html>
